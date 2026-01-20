@@ -8,8 +8,17 @@ import os
 # -------------------------
 # Config
 # -------------------------
+if "HEALTHCARE_AZURE_CONTAINER_NAME" not in st.secrets:
+    st.error("Azure container name secret is missing in Streamlit Cloud.")
+    st.stop()
+
+if "HEALTHCARE_AZURE_STORAGE_CONNECTION_STRING" not in st.secrets:
+    st.error("Azure storage connection string secret is missing.")
+    st.stop()
+
 CONTAINER_NAME = st.secrets["HEALTHCARE_AZURE_CONTAINER_NAME"]
 CONNECTION_STRING = st.secrets["HEALTHCARE_AZURE_STORAGE_CONNECTION_STRING"]
+
 UPLOAD_DIR = "blogs-images"
 
 
