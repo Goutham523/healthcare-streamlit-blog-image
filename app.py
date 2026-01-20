@@ -13,7 +13,7 @@ CONNECTION_STRING = st.secrets["HEALTHCARE_AZURE_STORAGE_CONNECTION_STRING"]
 UPLOAD_DIR = "blogs-images"
 
 
-# -------------------------
+# ------------------------
 # Azure Client
 # -------------------------
 @st.cache_resource
