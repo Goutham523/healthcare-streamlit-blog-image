@@ -15,7 +15,7 @@ UPLOAD_DIR = "blogs-images"
 
 # ------------------------
 # Azure Client
-# -------------------------
+# ------------------------
 @st.cache_resource
 def get_blob_service():
     return BlobServiceClient.from_connection_string(CONNECTION_STRING)
